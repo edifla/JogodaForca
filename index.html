@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estudos</title>
+</head>
+
+<body>
+    <div class="game">
+        <h2>Tentativas restantes</h2>
+        <p class="vidas">X</p>
+        <div class="caixa-forca">
+            <div class="forca">
+                <img src="Imagens/forca.png" alt="Imagem da forca" id="forca">
+            </div>
+            <div class="caixa-letras"></div>
+
+        </div>
+        <div class="caixa-final">
+            <div class="teclado">
+                <ul type="none">
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="Q">Q</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="W">W</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="E">E</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="R">R</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="T">T</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="Y">Y</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="U">U</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="I">I</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="O">O</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="P">P</button></li>
+                </ul>
+                <ul type="none">
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="A">A</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="S">S</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="D">D</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="F">F</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="G">G</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="H">H</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="J">J</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="K">K</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="L">L</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="Ç">Ç</button></li>
+                </ul>
+                <ul type="none">
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="Z">Z</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="X">X</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="C">C</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="V">V</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="B">B</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="N">N</button></li>
+                    <li><button class="btn" onclick="Game.verificando(this.id)" id="M">M</button></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+   
+
+    <script src="game.js"></script>
+</body>
+
+</html>
