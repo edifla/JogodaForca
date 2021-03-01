@@ -1,4 +1,4 @@
-const letrass = ['banana', 'pera', 'maça', 'jaca','melancia','ornitorrinco','proparoxitona','paralelepipedo','cabeleireira','otorrinolaringologista','infectologista']
+const letrass = ['jaca','melancia','ornitorrinco','proparoxitona','paralelepipedo','cabeleireira','otorrinolaringologista','infectologista','abelha','lapide','estojo','pincel','tinta','urna','queijo','boi','peru','dinheiro','onibus','gasolina','cacete']
 let PalavraEscolhida;
 let letras = document.querySelector('.caixa-letras')
 let arrayPalavraEscolhida;
