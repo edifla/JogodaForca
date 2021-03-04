@@ -11,6 +11,7 @@ let letras
 const Game = {
 	iniciar() {
 		vida = 6
+		forca.src = 'Imagens/forca.png'
 		let teclado = document.querySelectorAll('.btn')
 		for (let i = 0; i < teclado.length; i++) {
 			teclado[i].style.backgroundColor = 'white'
