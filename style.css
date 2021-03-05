@@ -88,3 +88,38 @@ li{
     box-shadow: none;
 }
 
+@media(max-width:600px){
+    .game{
+        margin: auto;
+    }
+    .game h2,
+    .vidas{
+        font-size: 10px;
+    }
+    .caixa-forca{
+        display: inline;
+    }
+    .forca{
+        display: flex;
+        justify-content: center;
+    }
+    .caixa-letras{
+        display: flex;
+        justify-content: center;
+    }
+    .reiniciar{
+        padding: 5px;
+        font-size: 10px;
+    }
+    .forca img{
+        width: 70px;
+        float: center;
+        margin: 40px 0 ;
+    }
+    .caixa-final .btn{
+        padding: 8px;
+        width: 4px;
+        height: 4px;
+        font-size: 10px;
+    }
+}

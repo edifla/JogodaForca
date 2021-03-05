@@ -6,12 +6,19 @@ let vidas = document.querySelector('.vidas')
 let forca = document.getElementById('forca')
 let vida = 6
 let letras
-
+let end = 0
 
 const Game = {
 	iniciar() {
 		vida = 6
+		vidas.style.color = 'black'
+		end = 0
 		forca.src = 'Imagens/forca.png'
+		let btn = document.querySelectorAll(".btn")
+		for (let i = 0; i < btn.length; i++) {
+			btn[i].removeAttribute('disabled');	
+		}
+
 		let teclado = document.querySelectorAll('.btn')
 		for (let i = 0; i < teclado.length; i++) {
 			teclado[i].style.backgroundColor = 'white'
@@ -39,19 +46,18 @@ const Game = {
 		if (arrayPalavraEscolhida != "") {
 			for (let i = 0; i != arrayPalavraEscolhida.length; i++) {
 				let espaco = document.createElement('p')
-				espaco.innerHTML = `<p class='espaco'></p>`
+				espaco.innerHTML = `<p class='espaco' id='espa'></p>`
 				letras.appendChild(espaco)
 			}
 		}
-
-
 	},
 	preenchimento(procura, id) {
 		let novo = []
 		var cor = document.getElementById(id.toUpperCase())
-		if (procura && cor.style.backgroundColor != '#92C792' && cor.style.backgroundColor != 'red' && vida != 0) {
-			let campos = document.querySelectorAll('.espaco')
-
+		let campos = document.querySelectorAll('.espaco')
+		if (procura && cor.style.backgroundColor != '#92C792' && cor.style.backgroundColor != 'red' && vida != 0 && end != arrayPalavraEscolhida.length)  
+		{
+			
 			function obtendoIndex(element, index) {
 				if (element === id) {
 					novo.push(index)
@@ -60,13 +66,14 @@ const Game = {
 			arrayPalavraEscolhida.forEach(obtendoIndex);
 			for (let i = 0; i < novo.length; i++) {
 				campos[novo[i]].innerHTML = id
+				end++
 			}
 			cor.style.backgroundColor = "#92C792";
 			// Travando letras que ja foram usadas
 		} else if (cor.style.backgroundColor == '#92C792' || cor.style.backgroundColor == 'red' || vida <= 0) {
 			return;
 			// Redução de vida e chamada de verificação da derrota
-		} else {
+		}else {
 			vida = vida - 1
 			vidas.innerHTML = vida
 			if (vida == 5) {
@@ -87,11 +94,21 @@ const Game = {
 			}
 			cor.style.backgroundColor = "red";
 		}
-
+		Game.fimDeJogo()
 	},
 	fimDeJogo() {
+		let btn = document.querySelectorAll(".btn")
 		if (vida == 0) {
+			for (let i = 0; i < btn.length; i++) {
+				btn[i].setAttribute('disabled', 'disabled');	
+			}
 			vidas.innerHTML = 'Fim do jogo, você perdeu.'
+		}else if(end == arrayPalavraEscolhida.length){
+			for (let i = 0; i < btn.length; i++) {
+				btn[i].setAttribute('disabled', 'disabled');	
+			}	
+			vidas.innerHTML = 'Fim do jogo, você venceu.'
+			vidas.style.color = 'green'
 		}else {
 			return;
 		}
